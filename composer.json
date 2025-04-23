@@ -1,0 +1,20 @@
+{
+    "name": "infinite-networks/user-bundle",
+    "description": "User bundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jonathan McLean"
+        }
+    ],
+    "require": {
+        "php": ">=8.2",
+        "doctrine/orm": "^2.3",
+        "symfony/framework-bundle": "^6 || ^7",
+        "symfony/form": "^6 || ^7",
+        "twig/twig": "^2.7 || ^3.0"
+    },
+    "autoload": {
+        "psr-4": { "Infinite\\UserBundle\\": "" }
+    }
+}
