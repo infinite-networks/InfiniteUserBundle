@@ -10,5 +10,5 @@ use Symfony\Component\Security\Core\User\UserInterface;
 
 interface InfiniteUserInterface extends UserInterface
 {
-    function getId(): int|string;
+    function getId(): int|string|null;
 }
