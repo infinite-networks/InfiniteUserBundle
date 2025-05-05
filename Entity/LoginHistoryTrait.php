@@ -130,6 +130,8 @@ trait LoginHistoryTrait
 
     public function updateLogoutDate(): void
     {
-        $this->logoutDate = new \DateTimeImmutable;
+        if (!$this->logoutDate) {
+            $this->logoutDate = new \DateTimeImmutable;
+        }
     }
 }

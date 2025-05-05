@@ -42,6 +42,10 @@ readonly class RequestListener implements EventSubscriberInterface
             return;
         }
 
+        if ($event->getRequest()->attributes->get('_controller') === 'error_controller') {
+            return;
+        }
+
         $user = $this->getUser();
 
         /** @var EntityManager $em */
