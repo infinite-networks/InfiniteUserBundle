@@ -8,7 +8,6 @@ namespace Infinite\UserBundle\Form\Type;
 
 use Infinite\UserBundle\Form\Model\TwoFactorLoginModel;
 use Symfony\Component\Form\AbstractType;
-use Symfony\Component\Form\Extension\Core\Type\HiddenType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
@@ -20,12 +19,11 @@ class TwoFactorLoginType extends AbstractType
         $builder->add('code', TextType::class, [
             'required' => true,
         ]);
-        $builder->add('secret', HiddenType::class);
     }
 
     public function getBlockPrefix(): string
     {
-        return 'two_factor_register';
+        return 'two_factor_login';
     }
 
     public function configureOptions(OptionsResolver $resolver): void
